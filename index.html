@@ -143,9 +143,73 @@
     <div class="container narrow">
       <h2 id="title-inscription" class="section__title">Inscription gratuite</h2>
       <p class="section__subtitle">Joueurs & clubs : rejoignez Dystri dès maintenant.</p>
+      
+<form class="form" action="https://formsubmit.co/TON-EMAIL" method="POST">
+
+  <!-- 🔥 Email automatique envoyé au joueur -->
+  <input type="hidden" name="_autoresponse" 
+         value="Merci pour ton inscription sur Dystri ! Nous revenons très vite vers toi.">
+
+  <!-- 🔥 Enregistrer automatiquement dans Google Sheets -->
+  <input type="hidden" name="_google" value="true">
+
+  <!-- Désactiver le captcha -->
+  <input type="hidden" name="_captcha" value="false">
+
+  <!-- Champs -->
+  <div class="form__row">
+    <label for="role">Je suis</label>
+    <select id="role" name="role" required>
+      <option value="">Choisir…</option>
+      <option value="joueur">Joueur</option>
+      <option value="club">Club</option>
+    </select>
+  </div>
+
+  <div class="form__row two">
+    <div>
+      <label for="name">Nom / Club</label>
+      <input id="name" name="name" type="text" required placeholder="Ex : Noah / AS Boulogne">
+    </div>
+    <div>
+      <label for="email">Email</label>
+      <input id="email" name="email" type="email" required placeholder="ton@email.fr">
+    </div>
+  </div>
+
+  <div class="form__row two">
+    <div>
+      <label for="cp">Code postal</label>
+      <input id="cp" name="cp" type="text" required placeholder="75015">
+    </div>
+    <div>
+      <label for="level">Niveau (si joueur)</label>
+      <select id="level" name="level">
+        <option value="">—</option>
+        <option>D1</option>
+        <option>D2</option>
+        <option>D3</option>
+        <option>D4</option>
+        <option>Loisir</option>
+      </select>
+    </div>
+  </div>
+
+  <div class="form__row">
+    <label for="message">Message</label>
+    <textarea id="message" 
+              name="message" 
+              rows="4" 
+              placeholder="Poste, disponibilités, besoins de recrutement…"></textarea>
+  </div>
+
+  <button class="btn btn--primary btn--full" type="submit">Envoyer</button>
+
+</form>
+
 
       <!-- Remplace TON-EMAIL par ton email pour recevoir les soumissions -->
-      <form class="form" action="https://formsubmit.co/TON-noah.desmaison@gmail.com" method="POST">
+      <form class="form" action="https://formsubmit.co/noah.desmaison@gmail.com" method="POST">
        <input type="hidden" name="_autoresponse" value="Merci pour ton inscription sur Dystri ! Nous revenons vite vers toi.">
         <input type="hidden" name="_captcha" value="false" />
         <div class="form__row">
