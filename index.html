@@ -1,77 +1,212 @@
 
-<!DOCTYPE html>
+<!doctype html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Dystri — Trouve ton club de foot idéal</title>
-
-  <!-- Bon fichier CSS -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Dystri — Le matching intelligent entre joueurs amateurs et clubs</title>
+  <meta name="description" content="Dystri aide les joueurs amateurs de football à trouver le club idéal près de chez eux : niveau, distance, horaires, ambiance, prix licence. Paris + 92.">
+  <!-- Police + CSS -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
+  <!-- Open Graph -->
+  <meta property="og:title" content="Dystri — Trouve ton club de foot idéal">
+  <meta property="og:description" content="Matching intelligent joueurs ↔ clubs. Niveau, distance, horaires, ambiance. Paris + 92.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://dummyimage.com/1200x630/0F48F5/ffffff&text=Dystri">
 </head>
-
 <body>
 
-<header class="header">
-  <div class="container header-inner">
-    <div class="logo">Dystri</div>
-    <nav>
-      <a href="#how">Fonctionnement</a>
-      <a href="#features">Fonctionnalités</a>
-      <a href="#inscription">S’inscrire</a>
-    </nav>
-  </div>
-</header>
-
-<section class="hero">
-  <div class="container hero-inner">
-    <div class="hero-text">
-      <p class="eyebrow">Football • Paris + 92</p>
-      <h1>Le matching <span class="grad">intelligent</span> entre joueurs amateurs et clubs</h1>
-      <p class="lead">
-        Trouve un club qui correspond à <strong>ton niveau</strong>, à ta <strong>distance</strong>
-        et à <strong>tes disponibilités</strong>.
-      </p>
+  <!-- ===== Header ===== -->
+  <header class="header">
+    <div class="container header__inner">
+      <a href="#" class="brand" aria-label="Accueil Dystri">
+        <span class="brand__mark">D</span>
+        <span class="brand__text">Dystri</span>
+      </a>
+      <nav class="nav" aria-label="Navigation principale">
+        <a href="#how">Fonctionnement</a>
+        <a href="#features">Fonctionnalités</a>
+        <a class="btn btn--outline" href="#inscription">S’inscrire</a>
+      </nav>
     </div>
-  </div>
-</section>
+  </header>
 
-<section id="how" class="section">
-  <div class="container">
-    <h2 class="section-title">Comment ça marche ?</h2>
-
-    <div class="steps">
-      <div class="step">
-        <h3>1. Crée ton profil</h3>
-        <p>Poste, niveau, statut, localisation.</p>
+  <!-- ===== Hero ===== -->
+  <section class="hero" aria-labelledby="title-hero">
+    <div class="container hero__grid">
+      <div class="hero__text">
+        <p class="eyebrow">Football • Paris + 92</p>
+        <h1 id="title-hero">
+          Le matching <span class="grad">intelligent</span> entre joueurs amateurs et clubs
+        </h1>
+        <p class="lead">
+          Trouve un club qui correspond à <strong>ton niveau</strong>, à ta <strong>distance</strong>,
+          à <strong>tes horaires</strong> et à l’<strong>ambiance</strong> que tu recherches.
+        </p>
+        <div class="hero__cta">
+          <a class="btn btn--primary" href="#inscription">Commencer</a>
+          <a class="btn btn--ghost" href="#features">Découvrir</a>
+        </div>
+        <ul class="hero__ticks">
+          <li>✅ Dystri Score (compatibilité %)</li>
+          <li>✅ Demande d’essai en 1 clic</li>
+          <li>✅ Fiches clubs : prix, horaires, historique 5 ans</li>
+        </ul>
       </div>
 
-      <div class="step">
-        <h3>2. Reçois des clubs compatibles</h3>
-        <p>Matching basé sur ton niveau + distance + horaires.</p>
-      </div>
+      <aside class="hero__card" aria-label="Carte de compatibilité Dystri">
+        <div class="kpi">
+          <span class="kpi__label">Dystri Score</span>
+          <span class="kpi__value">87%</span>
+        </div>
+        <ul class="card__list">
+          <li><span>⚽</span> Niveau compatible : D2</li>
+          <li><span>📍</span> Distance : 12 min</li>
+          <li><span>🕒</span> Entraînements : mar/jeu 20h</li>
+          <li><span>🔥</span> Ambiance : compétitive</li>
+        </ul>
+        <a class="btn btn--primary btn--full" href="#inscription">Trouver un club</a>
+      </aside>
+    </div>
+    <div class="hero__blur hero__blur--1" aria-hidden="true"></div>
+    <div class="hero__blur hero__blur--2" aria-hidden="true"></div>
+  </section>
 
-      <div class="step">
-        <h3>3. Passe un essai</h3>
-        <p>Contact en 1 clic, créneau proposé automatiquement.</p>
+  <!-- ===== Comment ça marche ===== -->
+  <section id="how" class="section" aria-labelledby="title-how">
+    <div class="container">
+      <h2 id="title-how" class="section__title">Comment ça marche&nbsp;?</h2>
+      <div class="steps">
+        <article class="card step">
+          <div class="step__n">1</div>
+          <h3>Crée ton profil</h3>
+          <p>Poste, niveau, statut (dispo, reprise), localisation et disponibilités.</p>
+        </article>
+        <article class="card step">
+          <div class="step__n">2</div>
+          <h3>Reçois des clubs compatibles</h3>
+          <p>Matching basé sur le niveau, la distance, les horaires et les besoins des équipes.</p>
+        </article>
+        <article class="card step">
+          <div class="step__n">3</div>
+          <h3>Demande un essai</h3>
+          <p>Contact direct, créneau proposé, rappels automatiques.</p>
+        </article>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<section id="inscription" class="section">
-  <div class="container">
-    <h2 class="section-title">Inscription gratuite</h2>
-    <p>Joueurs & clubs : rejoignez Dystri dès maintenant.</p>
-  </div>
-</section>
+  <!-- ===== Fonctionnalités ===== -->
+  <section id="features" class="section section--alt" aria-labelledby="title-features">
+    <div class="container">
+      <h2 id="title-features" class="section__title">Fonctionnalités clés</h2>
+      <div class="features">
+        <article class="card feature">
+          <div class="icon">💯</div>
+          <h3>Dystri Score</h3>
+          <p>Compatibilité % selon niveau, distance, horaires et poste.</p>
+        </article>
+        <article class="card feature">
+          <div class="icon">📇</div>
+          <h3>Fiches clubs complètes</h3>
+          <p>Prix licence, entraînements, historique 5 ans, réseaux sociaux.</p>
+        </article>
+        <article class="card feature">
+          <div class="icon">⚖️</div>
+          <h3>Comparateur de clubs</h3>
+          <p>Compare 2 clubs sur les critères clés en un clic.</p>
+        </article>
+        <article class="card feature">
+          <div class="icon">🟢</div>
+          <h3>Statut joueur</h3>
+          <p>Disponible, reprise, blessé, en test — transparence côté clubs.</p>
+        </article>
+        <article class="card feature">
+          <div class="icon">🔔</div>
+          <h3>Notifs intelligentes</h3>
+          <p>Alertes “nouveau joueur compatible”, “fiche incomplète”, visites.</p>
+        </article>
+        <article class="card feature">
+          <div class="icon">🗞️</div>
+          <h3>Mini‑réseau clubs</h3>
+          <p>Fil d’annonces de recrutement et d’infos locales.</p>
+        </article>
+      </div>
+    </div>
+  </section>
 
-<footer class="footer">
-  <div class="container">
-    <p>© 2024 Dystri</p>
-  </div>
-</footer>
+  <!-- ===== Inscription ===== -->
+  <section id="inscription" class="section" aria-labelledby="title-inscription">
+    <div class="container narrow">
+      <h2 id="title-inscription" class="section__title">Inscription gratuite</h2>
+      <p class="section__subtitle">Joueurs & clubs : rejoignez Dystri dès maintenant.</p>
 
+      <!-- Remplace TON-EMAIL par ton email pour recevoir les soumissions -->
+      <form class="form" action="https://formsubmit.co/TON-EMAIL" method="POST">
+        <input type="hidden" name="_captcha" value="false" />
+        <div class="form__row">
+          <label for="role">Je suis</label>
+          <select id="role" name="role" required>
+            <option value="">Choisir…</option>
+            <option value="joueur">Joueur</option>
+            <option value="club">Club</option>
+          </select>
+        </div>
+
+        <div class="form__row two">
+          <div>
+            <label for="name">Nom / Club</label>
+            <input id="name" name="name" type="text" required placeholder="Ex : Noah / AS Boulogne" />
+          </div>
+          <div>
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" required placeholder="ton@email.fr" />
+          </div>
+        </div>
+
+        <div class="form__row two">
+          <div>
+            <label for="cp">Code postal</label>
+            <input id="cp" name="cp" type="text" required placeholder="75015" />
+          </div>
+          <div>
+            <label for="level">Niveau (si joueur)</label>
+            <select id="level" name="level">
+              <option value="">—</option>
+              <option>D1</option><option>D2</option><option>D3</option><option>D4</option><option>Loisir</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form__row">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="4" placeholder="Poste, dispos, besoins de recrutement…"></textarea>
+        </div>
+
+        <button class="btn btn--primary btn--full" type="submit">Envoyer</button>
+        <p class="form__mini">En envoyant, vous acceptez notre Politique de confidentialité.</p>
+      </form>
+    </div>
+  </section>
+
+  <!-- ===== Footer ===== -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <p>© <span id="y"></span> Dystri — Paris · 92</p>
+      <div class="footer__links">
+        <a href="#" aria-disabled="true">CGU</a>
+        <span>•</span>
+        <a href="#" aria-disabled="true">Confidentialité</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('y').textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
 ``
