@@ -138,19 +138,20 @@
     </div>
   </section>
 
-  <!-- ===== Inscription ===== -->
-  <section id="inscription" class="section" aria-labelledby="title-inscription">
-    <div class="container narrow">
-      <h2 id="title-inscription" class="section__title">Inscription gratuite</h2>
-      <p class="section__subtitle">Joueurs & clubs : rejoignez Dystri dès maintenant.</p>
-      
+  
+<!-- ===== Inscription ===== -->
+<section id="inscription" class="section" aria-labelledby="title-inscription">
+  <div class="container narrow">
+    <h2 id="title-inscription" class="section__title">Inscription gratuite</h2>
+    <p class="section__subtitle">Joueurs & clubs : rejoignez Dystri dès maintenant.</p>
+
 <form class="form" action="https://formsubmit.co/TON-EMAIL" method="POST">
 
-  <!-- 🔥 Email automatique envoyé au joueur -->
+  <!-- Email automatique envoyé au joueur -->
   <input type="hidden" name="_autoresponse" 
          value="Merci pour ton inscription sur Dystri ! Nous revenons très vite vers toi.">
 
-  <!-- 🔥 Enregistrer automatiquement dans Google Sheets -->
+  <!-- Enregistrer automatiquement dans Google Sheets -->
   <input type="hidden" name="_google" value="true">
 
   <!-- Désactiver le captcha -->
@@ -186,30 +187,26 @@
       <label for="level">Niveau (si joueur)</label>
       <select id="level" name="level">
         <option value="">—</option>
-        <option>D1</option>
-        <option>D2</option>
-        <option>D3</option>
-        <option>D4</option>
-        <option>Loisir</option>
+        <option>D1</option><option>D2</option><option>D3</option><option>D4</option><option>Loisir</option>
       </select>
     </div>
   </div>
 
   <div class="form__row">
     <label for="message">Message</label>
-    <textarea id="message" 
-              name="message" 
-              rows="4" 
-              placeholder="Poste, disponibilités, besoins de recrutement…"></textarea>
+    <textarea id="message" name="message" rows="4" placeholder="Poste, disponibilités, besoins de recrutement…"></textarea>
   </div>
 
   <button class="btn btn--primary btn--full" type="submit">Envoyer</button>
 
 </form>
 
+  </div>
+</section>
+
+
 
       <!-- Remplace TON-EMAIL par ton email pour recevoir les soumissions -->
-      <form class="form" action="https://formsubmit.co/noah.desmaison@gmail.com" method="POST">
        <input type="hidden" name="_autoresponse" value="Merci pour ton inscription sur Dystri ! Nous revenons vite vers toi.">
         <input type="hidden" name="_captcha" value="false" />
         <div class="form__row">
